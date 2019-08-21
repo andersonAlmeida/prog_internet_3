@@ -1,0 +1,11 @@
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\bin\Debug\netcoreapp2.1\TerceiroProjeto.deps.json
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\bin\Debug\netcoreapp2.1\TerceiroProjeto.runtimeconfig.json
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\bin\Debug\netcoreapp2.1\TerceiroProjeto.runtimeconfig.dev.json
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\bin\Debug\netcoreapp2.1\TerceiroProjeto.dll
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\bin\Debug\netcoreapp2.1\TerceiroProjeto.pdb
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\obj\Debug\netcoreapp2.1\TerceiroProjeto.csprojAssemblyReference.cache
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\obj\Debug\netcoreapp2.1\TerceiroProjeto.csproj.CoreCompileInputs.cache
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\obj\Debug\netcoreapp2.1\TerceiroProjeto.AssemblyInfoInputs.cache
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\obj\Debug\netcoreapp2.1\TerceiroProjeto.AssemblyInfo.cs
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\obj\Debug\netcoreapp2.1\TerceiroProjeto.dll
+C:\Users\630701670\Desktop\prog. internet 3\TerceiroProjeto\TerceiroProjeto\obj\Debug\netcoreapp2.1\TerceiroProjeto.pdb

@@ -1,0 +1,11 @@
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\bin\Debug\netcoreapp2.1\QuintoProjeto.deps.json
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\bin\Debug\netcoreapp2.1\QuintoProjeto.runtimeconfig.json
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\bin\Debug\netcoreapp2.1\QuintoProjeto.runtimeconfig.dev.json
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\bin\Debug\netcoreapp2.1\QuintoProjeto.dll
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\bin\Debug\netcoreapp2.1\QuintoProjeto.pdb
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\obj\Debug\netcoreapp2.1\QuintoProjeto.csprojAssemblyReference.cache
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\obj\Debug\netcoreapp2.1\QuintoProjeto.csproj.CoreCompileInputs.cache
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\obj\Debug\netcoreapp2.1\QuintoProjeto.AssemblyInfoInputs.cache
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\obj\Debug\netcoreapp2.1\QuintoProjeto.AssemblyInfo.cs
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\obj\Debug\netcoreapp2.1\QuintoProjeto.dll
+C:\Users\630701670\Desktop\prog. internet 3\QuintoProjeto\QuintoProjeto\obj\Debug\netcoreapp2.1\QuintoProjeto.pdb
