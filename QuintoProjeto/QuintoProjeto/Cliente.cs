@@ -4,7 +4,7 @@ using System.Text;
 
 namespace QuintoProjeto
 {
-    class abstract Cliente
+    abstract class Cliente
     {
         //public string nome;
         //public double salario;
