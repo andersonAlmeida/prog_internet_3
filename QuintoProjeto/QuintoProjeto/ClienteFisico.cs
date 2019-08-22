@@ -22,5 +22,13 @@ namespace QuintoProjeto
             Rg = rg;
             Renda = renda;
         }
+
+        /* A palavra OVERRIDE indica que você está sobreescrevendo
+         * um método VIRTUAL
+         */
+        public override string GetInfo()
+        {
+            return "Nome: " + Nome + "\nCPF: " + Cpf;
+        }
     }
 }

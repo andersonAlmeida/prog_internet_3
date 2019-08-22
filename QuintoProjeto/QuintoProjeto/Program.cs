@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace QuintoProjeto
 {
@@ -44,11 +45,32 @@ namespace QuintoProjeto
                 agencia = 0001,
                 conta = 1236
             };
-            
-            ClienteFisico cf = new ClienteFisico();
-            cf.Cpf = "01236547898";
 
-            ClienteJuridico cj = new ClienteJuridico();
+            ClienteFisico cf = new ClienteFisico("01236547898", "508080820", 27387.47)
+            {
+                Nome = "Anderson"
+            };
+            //cf.Cpf = "01236547898";
+            Console.Write( cf.GetInfo() );
+
+            //ClienteJuridico cj = new ClienteJuridico();
+
+            //Lista de clientes
+            List<Cliente> lista = new List<Cliente>();
+            lista.Add(cf);
+            lista.Add(new ClienteFisico("78943213545", "63021548", 987.00) {
+                Nome = "Jorge"
+            });
+
+            //for(int i=0; i<lista.Count; i++)
+            //{
+            //    Console.WriteLine( lista[i].Nome );
+            //}
+
+            foreach( Cliente c in lista )
+            {
+                Console.WriteLine(c.Nome);
+            }
 
 
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace QuintoProjeto
 {
-    class Cliente
+    class abstract Cliente
     {
         //public string nome;
         //public double salario;
@@ -54,6 +54,14 @@ namespace QuintoProjeto
             this.Nome = nome;
             this.SobreNome = sobreNome;
             this.Salario = salario;
+        }
+
+        /* A palavra VIRTUAL indica que é permitido 
+         * sobreescrever esse método
+         */
+        public virtual string GetInfo()
+        {
+            return Nome;
         }
 
     }
