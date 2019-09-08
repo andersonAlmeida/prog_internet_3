@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BancoMundial
 {
-    abstract class Pessoa
+    public abstract class Pessoa
     {
         public int NumeroDePessoas { get; set; }
 
@@ -23,6 +23,8 @@ namespace BancoMundial
             this.Endereco = endereco;
             this.Tel = tel;
             this.Email = email;
+
+            this.NumeroDePessoas++;
         }
     }
 }

@@ -28,7 +28,9 @@ namespace BancoMundial
         public PessoaJuridica(
             int id, string endereco, string tel, string email,
             ArrayList socios, int cnpj, string razaoSocial, string nomeFantasia,
-            int inscrEstadual, DateTime dataAbertura):base(id, endereco, tel, email) {
+            int inscrEstadual, DateTime dataAbertura):base(id, endereco, tel, email)
+        {
+            Auxiliar aux = new Auxiliar();
 
             this.Socios = socios;
             this.Cnpj = cnpj;
@@ -36,6 +38,12 @@ namespace BancoMundial
             this.NomeFantasia = nomeFantasia;
             this.InscrEstadual = inscrEstadual;
             this.DataAbertura = dataAbertura;
+            this.Idade = aux.CalculaIdade(dataAbertura);
+        }
+
+        public int GetIdade()
+        {
+            return this.Idade;
         }
 
 

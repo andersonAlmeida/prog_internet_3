@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BancoMundial
 {
-    class PessoaFisica: Pessoa
+    public class PessoaFisica: Pessoa
     {
         public string Nome { get; set; }
 
@@ -26,14 +26,28 @@ namespace BancoMundial
 
         public PessoaFisica(
             int id, string endereco, string tel, string email,
-            string nome, string sobrenome, string rg, string cpf, DateTime dataNasc):base(id, endereco, tel, email) {
+            string nome, string sobrenome, string rg, string cpf, DateTime dataNasc):base(id, endereco, tel, email)
+        {
+            Auxiliar aux = new Auxiliar();
 
             this.Nome = nome;
             this.Sobrenome = sobrenome;
             this.Rg = rg;
             this.Cpf = cpf;
             this.DataNasc = dataNasc;
+            this.Idade = aux.CalculaIdade(dataNasc);
+            this.FaixaEtaria = aux.FaixaEtaria(this.Idade);
             
+        }
+
+        public int GetIdade()
+        {
+            return this.Idade;
+        }
+
+        public string GetFaixaEtaria()
+        {
+            return this.FaixaEtaria;
         }
 
         

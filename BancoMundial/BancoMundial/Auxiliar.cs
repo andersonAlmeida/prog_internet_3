@@ -11,6 +11,12 @@ namespace BancoMundial
         public int CalculaIdade(DateTime data)
         {
             int idade = 0;
+            DateTime hoje = DateTime.Today;
+
+            idade = hoje.Year - data.Year;
+
+            if (data.Date > hoje.AddYears(-idade)) idade--;
+                    
             return idade;
         }
 

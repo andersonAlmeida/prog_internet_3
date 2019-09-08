@@ -18,12 +18,36 @@ namespace BancoMundial
 
         private double TaxaSaque;
 
-        public void Sacar(double valor) { }
+        public virtual void Sacar(double valor) {
+            this.Saldo -= valor + this.TaxaSaque; 
+        }
 
         public double ConsultarSaldo()
         {
             return this.Saldo;
         }
         public void Transferir(Conta conta, double valor) { }
+
+        public Conta(Pessoa titular, long numero, int agencia, double taxaSaque) {
+            this.Titular = titular;
+            this.Numero = numero;
+            this.Agencia = agencia;
+            this.TaxaSaque = taxaSaque;
+
+            this.Saldo = 0.0;
+        }
+
+        public void SetSaldo(double valor)
+        {
+            this.Saldo += valor;
+        }
+
+        public void SetTaxaSaque(double valor)
+        {
+            this.TaxaSaque = valor;
+        }
+
+        public abstract void Transferencia(Conta credito, double valor);
+
     }
 }
