@@ -8,5 +8,6 @@ namespace BancoMundial
 {
     interface Depositavel
     {
+        void Depositar(double valor);
     }
 }

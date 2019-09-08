@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BancoMundial
 {
-    class Conta
+    abstract class Conta
     {
         public Pessoa Titular { get; set; }
 

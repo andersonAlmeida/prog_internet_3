@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BancoMundial
 {
-    class ContaSalario
+    class ContaSalario:Conta
     {
+        public ContaSalario(Pessoa titular, long numero, int agencia, double taxaSaque) { }
     }
 }

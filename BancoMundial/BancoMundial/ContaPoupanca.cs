@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BancoMundial
 {
-    class ContaPoupanca
+    class ContaPoupanca:Conta
     {
+        public ContaPoupanca(Pessoa titular, long numero, int agencia, double taxaSaque) { }
     }
 }
