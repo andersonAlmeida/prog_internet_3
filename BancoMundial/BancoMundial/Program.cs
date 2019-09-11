@@ -45,6 +45,7 @@ namespace BancoMundial
 
             conta2.Depositar(250000.80);
             conta2.Transferencia(conta1, 2500.00);
+            conta2.Sacar(100);
 
             Console.WriteLine("Conta: {0}", conta2.Numero);
             Console.WriteLine("Agencia: {0}", conta2.Agencia);
@@ -53,6 +54,8 @@ namespace BancoMundial
             Console.WriteLine("");
             Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
             Console.WriteLine("");
+
+            conta1.Sacar(500);
 
             Console.WriteLine("Conta: {0}", conta1.Numero);
             Console.WriteLine("Agencia: {0}", conta1.Agencia);
