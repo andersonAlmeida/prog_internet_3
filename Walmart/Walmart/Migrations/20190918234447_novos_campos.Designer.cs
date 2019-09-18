@@ -9,8 +9,8 @@ using Walmart.Models;
 namespace Walmart.Migrations
 {
     [DbContext(typeof(WalmartContext))]
-    [Migration("20190912004305_primeiro")]
-    partial class primeiro
+    [Migration("20190918234447_novos_campos")]
+    partial class novos_campos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,13 @@ namespace Walmart.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name");
+                    b.Property<int>("CostumerSatisfaction");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("Site");
 
                     b.HasKey("Id");
 
