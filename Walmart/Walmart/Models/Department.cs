@@ -20,5 +20,32 @@ namespace Walmart.Models
         [Display(Name = "Costumer Satisfaction")]
         [Range(1,5)]
         public int? CostumerSatisfaction { get; set; }
+
+        public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
+
+        public Department()
+        {
+        }
+
+        public Department(int id, string name, string site, int? costumerSatisfaction, ICollection<Seller> sellers)
+        {
+            Id = id;
+            Name = name;
+            Site = site;
+            CostumerSatisfaction = costumerSatisfaction;
+            Sellers = sellers;
+        }
+
+        public void AddSaller(Seller Seller)
+        {
+            Sellers.Add(Seller);
+        }
+
+        public double TotalSales(DateTime Initial, DateTime Final)
+        {
+            // Vamos usar o LINQ
+
+            return 2.0;
+        }
     }
 }
