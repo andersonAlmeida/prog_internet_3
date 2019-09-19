@@ -23,7 +23,7 @@ namespace Walmart.Models
         {
         }
 
-        public Seller(int id, string name, string email, DateTime birthDate, double salary, Department department, ICollection<SalesRecord> salesRecords)
+        public Seller(int id, string name, string email, DateTime birthDate, double salary, Department department)
         {
             Id = id;
             Name = name;
@@ -31,7 +31,6 @@ namespace Walmart.Models
             BirthDate = birthDate;
             Salary = salary;
             Department = department;
-            SalesRecords = salesRecords;
         }
 
         public void AddSales(SalesRecord salesRecord)

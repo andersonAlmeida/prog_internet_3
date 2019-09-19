@@ -27,13 +27,12 @@ namespace Walmart.Models
         {
         }
 
-        public Department(int id, string name, string site, int? costumerSatisfaction, ICollection<Seller> sellers)
+        public Department(int id, string name, string site, int? costumerSatisfaction)
         {
             Id = id;
             Name = name;
             Site = site;
             CostumerSatisfaction = costumerSatisfaction;
-            Sellers = sellers;
         }
 
         public void AddSaller(Seller Seller)
