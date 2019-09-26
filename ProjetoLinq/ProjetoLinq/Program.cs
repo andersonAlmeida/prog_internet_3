@@ -75,6 +75,12 @@ namespace ProjetoLinq
             var r6 = products.Where(p => p.Category.Id == 2).OrderBy(p => p.Price).ThenBy(p => p.Name);
             Print("Pega os produtos ordenador por preço e nome", r6);
 
+            var r7 = products.FirstOrDefault();
+            Console.WriteLine("Primeiro produto da lista \n" + r7 + "\n\n");
+
+            var r8 = products.Where(p => p.Id == 1).SingleOrDefault();
+            Console.WriteLine("Produto de Id == 1 \n" + r8);
+
         }
     }
 }
