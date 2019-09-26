@@ -55,12 +55,20 @@ namespace ProjetoLinq
             };
 
             // filtra e armazena o resultado do filtro em uma variavel genérica
-            var filtered_product = products.Where(p => p.Price > 700 && p.Category.Id == 2);
+            var r1 = products.Where(p => p.Price > 700 && p.Category.Id == 2);
+            Print("Lista de Produtos maiores que $700 e da categoria computers", r1);
 
-            var r1 = products.Where(p => p.Category.Type == 3 && p.Price < 50);
+            var r2 = products.Where(p => p.Category.Type == 3 && p.Price < 50);
+            Print("Lista de Produtos menores que $50 e da categoria furnitures", r2);
 
-            Print("Lista de Produtos maiores que $700 e da categoria computers", filtered_product);
-            Print("Lista de Produtos menores que $50 e da categoria furnitures", r1);
+            var r3 = products.Where(p => p.Category.Name == "Computers").Select(p => p.Name);
+            Print("Produtos da Categoria Computers", r3);
+
+            // utilização de objetos anônimos - Objeto de uma classe 
+            // Note que CategoryName é um alias para p.Category.Name
+            var r4 = products.Where(p => p.Name[0] == 'S').Select(p => new { p.Name, CategpryName = p.Category.Name, p.Price });
+            Print("Produtos que começam com a letra S", r4);
+
         }
     }
 }
