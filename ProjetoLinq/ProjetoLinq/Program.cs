@@ -69,6 +69,12 @@ namespace ProjetoLinq
             var r4 = products.Where(p => p.Name[0] == 'S').Select(p => new { p.Name, CategpryName = p.Category.Name, p.Price });
             Print("Produtos que começam com a letra S", r4);
 
+            var r5 = products.Where(p => p.Category.Id == 1 ).OrderByDescending(p => p.Price);
+            Print("Pega os produtos ordenador por preço", r5);
+
+            var r6 = products.Where(p => p.Category.Id == 2).OrderBy(p => p.Price).ThenBy(p => p.Name);
+            Print("Pega os produtos ordenador por preço e nome", r6);
+
         }
     }
 }
