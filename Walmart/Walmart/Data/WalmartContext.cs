@@ -22,3 +22,5 @@ namespace Walmart.Models
 
 // Ferramentas > Gerenciador de Pacotes do Nuget > Console
 // Add-Migration [NomeDaMigracao]
+// Depois do Migration atualizar o banco
+// Update-Database
