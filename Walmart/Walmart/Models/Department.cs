@@ -35,16 +35,16 @@ namespace Walmart.Models
             CostumerSatisfaction = costumerSatisfaction;
         }
 
-        public void AddSaller(Seller Seller)
+        public void AddSeller(Seller Seller)
         {
             Sellers.Add(Seller);
         }
 
-        public double TotalSales(DateTime Initial, DateTime Final)
+        public double TotalSales(DateTime initial, DateTime final)
         {
             // Vamos usar o LINQ
 
-            return 2.0;
+            return Sellers.Sum(seller => seller.TotalSales(initial, final));
         }
     }
 }

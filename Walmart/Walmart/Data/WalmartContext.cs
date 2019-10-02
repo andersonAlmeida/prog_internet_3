@@ -14,5 +14,11 @@ namespace Walmart.Models
         }
 
         public DbSet<Walmart.Models.Department> Department { get; set; }
+        public DbSet<Walmart.Models.Seller> Seller { get; set; }
+        public DbSet<Walmart.Models.SalesRecord> SalesRecord { get; set; }
+        
     }
 }
+
+// Ferramentas > Gerenciador de Pacotes do Nuget > Console
+// Add-Migration [NomeDaMigracao]

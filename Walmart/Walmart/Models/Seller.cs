@@ -45,7 +45,9 @@ namespace Walmart.Models
 
         public double TotalSales(DateTime initial, DateTime final)
         {
-            return 0;
+            // Usar o Linq para filtrar a lista de vendas com lambda
+            return SalesRecords.Where(
+                sr => sr.Date >= initial && sr.Date <= final).Sum(sr => sr.Amount);
         }
     }
 }
