@@ -81,6 +81,36 @@ namespace ProjetoLinq
             var r8 = products.Where(p => p.Id == 1).SingleOrDefault();
             Console.WriteLine("Produto de Id == 1 \n" + r8);
 
+            // 
+
+            var r9 = from p in products
+                     where p.Category.Type == 1 &&
+                     p.Price > 50
+                     select p;
+
+            Print("\n\n Produtos da categoria 1 com preço maior que 600", r9);
+
+
+            var r10 = from p in products
+                     where p.Name[0] == 'S'
+                     select new
+                     {
+                         p.Name,
+                         p.Price,
+                         CategoryName = p.Category.Name
+                     };
+
+            Print("\n\n Produtos que começam com a letra S", r10);
+
+
+            var r11 = from p in products
+                     where p.Category.Type == 1
+                     orderby p.Price
+                     orderby p.Name
+                     select p;
+
+            Print("\n\n Produtos da categoria 1 ordenados pelo preço e então pelo nome", r11);
+
         }
     }
 }
