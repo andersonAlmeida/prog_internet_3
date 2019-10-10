@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Walmart.Models;
+using Walmart.Data;
 
 namespace Walmart.Migrations
 {
     [DbContext(typeof(WalmartContext))]
-    [Migration("20191002232347_AdicionandoOutrasEntidades")]
-    partial class AdicionandoOutrasEntidades
+    [Migration("20191009234523_Walmart09102019")]
+    partial class Walmart09102019
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,9 +23,7 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.Department", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id");
 
                     b.Property<int?>("CostumerSatisfaction");
 
@@ -42,9 +40,7 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.SalesRecord", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id");
 
                     b.Property<double>("Amount");
 
@@ -63,9 +59,7 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.Seller", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id");
 
                     b.Property<DateTime>("BirthDate");
 

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Walmart.Models;
+using Walmart.Data;
 
 namespace Walmart.Migrations
 {
@@ -21,9 +21,7 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.Department", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id");
 
                     b.Property<int?>("CostumerSatisfaction");
 
@@ -40,9 +38,7 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.SalesRecord", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id");
 
                     b.Property<double>("Amount");
 
@@ -61,9 +57,7 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.Seller", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id");
 
                     b.Property<DateTime>("BirthDate");
 

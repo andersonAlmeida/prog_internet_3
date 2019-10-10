@@ -1,0 +1,38 @@
+﻿@model Walmart.Models.Seller;
+@{
+    ViewData["Title"] = "Create New Seller";
+}
+
+<div class="col-12">
+    <h2>@ViewData["Title"]</h2>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Name</label>
+                <input asp-for="Name" class="form-control" name="Name" placeholder="Seller name" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">E-mail</label>
+                <input asp-for="Email" class="form-control" name="Name" placeholder="Seller e-mail" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label">Birth Date</label>
+                <input asp-for="BirthDate" class="form-control" name="Name" placeholder="Seller birth date" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label">Salary</label>
+                <input asp-for="Salary" class="form-control" name="Name" placeholder="Seller salary" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-primary btn-sm">Save new seller</button>
+            </div>
+        </form>
+    </div>
+</div>

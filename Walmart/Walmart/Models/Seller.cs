@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace Walmart.Models
 {
     public class Seller
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [MaxLength(20, ErrorMessage = "O limite máximo é 20 caracteres")]
         [MinLength(2, ErrorMessage = "O limite minímo é 2 caracteres")]

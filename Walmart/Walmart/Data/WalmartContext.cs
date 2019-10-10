@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace Walmart.Models
+namespace Walmart.Data
 {
     public class WalmartContext : DbContext
     {
