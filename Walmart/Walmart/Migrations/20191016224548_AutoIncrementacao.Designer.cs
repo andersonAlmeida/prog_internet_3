@@ -10,8 +10,8 @@ using Walmart.Data;
 namespace Walmart.Migrations
 {
     [DbContext(typeof(WalmartContext))]
-    [Migration("20191009234523_Walmart09102019")]
-    partial class Walmart09102019
+    [Migration("20191016224548_AutoIncrementacao")]
+    partial class AutoIncrementacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,9 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.Department", b =>
                 {
-                    b.Property<int>("Id");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("CostumerSatisfaction");
 
@@ -40,7 +42,9 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.SalesRecord", b =>
                 {
-                    b.Property<int>("Id");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<double>("Amount");
 
@@ -59,7 +63,9 @@ namespace Walmart.Migrations
 
             modelBuilder.Entity("Walmart.Models.Seller", b =>
                 {
-                    b.Property<int>("Id");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("BirthDate");
 

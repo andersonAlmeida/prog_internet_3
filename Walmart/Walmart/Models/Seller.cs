@@ -9,7 +9,7 @@ namespace Walmart.Models
 {
     public class Seller
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [MaxLength(20, ErrorMessage = "O limite máximo é 20 caracteres")]
         [MinLength(2, ErrorMessage = "O limite minímo é 2 caracteres")]
@@ -18,6 +18,7 @@ namespace Walmart.Models
         public DateTime BirthDate { get; set; }
         public double Salary { get; set; }
 
+        public int DepartmentId { get; set; }
         public Department Department { get; set; }
         public ICollection<SalesRecord> SalesRecords { get; set; } = new List<SalesRecord>();
 
@@ -28,6 +29,15 @@ namespace Walmart.Models
         public Seller(int id, string name, string email, DateTime birthDate, double salary, Department department)
         {
             Id = id;
+            Name = name;
+            Email = email;
+            BirthDate = birthDate;
+            Salary = salary;
+            Department = department;
+        }
+
+        public Seller(string name, string email, DateTime birthDate, double salary, Department department)
+        {
             Name = name;
             Email = email;
             BirthDate = birthDate;
@@ -51,5 +61,6 @@ namespace Walmart.Models
             return SalesRecords.Where(
                 sr => sr.Date >= initial && sr.Date <= final).Sum(sr => sr.Amount);
         }
+        
     }
 }

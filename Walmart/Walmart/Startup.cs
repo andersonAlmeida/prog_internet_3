@@ -44,6 +44,9 @@ namespace Walmart
 
             // Adiciona SellerService na lista de serviços
             services.AddScoped<SellerService>();
+
+            // Adiciona DepartmentService na lista de serviços
+            services.AddScoped<DepartmentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

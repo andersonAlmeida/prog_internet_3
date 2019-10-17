@@ -9,7 +9,7 @@ namespace Walmart.Models
 {       
     public class Department
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [Required]
         [MaxLength(20, ErrorMessage = "Esse campo só aceita no máximo 20 caracteres"), MinLength(3, ErrorMessage = "O minímo aceito são 3 caracteres")]
@@ -34,6 +34,13 @@ namespace Walmart.Models
             Name = name;
             Site = site;
             CostumerSatisfaction = costumerSatisfaction;
+        }
+
+        public Department(string name, string site, int? costumerSatisfaction)
+        {
+            Name = name;
+            Site = site;
+            CostumerSatisfaction = costumerSatisfaction;            
         }
 
         public void AddSeller(Seller Seller)

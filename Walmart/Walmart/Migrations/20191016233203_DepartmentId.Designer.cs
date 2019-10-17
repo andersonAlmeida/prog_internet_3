@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Walmart.Data;
 
 namespace Walmart.Migrations
 {
     [DbContext(typeof(WalmartContext))]
-    partial class WalmartContextModelSnapshot : ModelSnapshot
+    [Migration("20191016233203_DepartmentId")]
+    partial class DepartmentId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

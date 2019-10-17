@@ -1,9 +1,10 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Walmart.Migrations
 {
-    public partial class Walmart09102019 : Migration
+    public partial class AutoIncrementacao : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +12,8 @@ namespace Walmart.Migrations
                 name: "Department",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 20, nullable: false),
                     Site = table.Column<string>(nullable: true),
                     CostumerSatisfaction = table.Column<int>(nullable: true)
@@ -25,7 +27,8 @@ namespace Walmart.Migrations
                 name: "Seller",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 20, nullable: true),
                     Email = table.Column<string>(nullable: true),
                     BirthDate = table.Column<DateTime>(nullable: false),
@@ -47,7 +50,8 @@ namespace Walmart.Migrations
                 name: "SalesRecord",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Date = table.Column<DateTime>(nullable: false),
                     Amount = table.Column<double>(nullable: false),
                     Status = table.Column<int>(nullable: false),
