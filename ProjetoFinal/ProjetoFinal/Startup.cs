@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using ProjetoFinal.Models;
 
 namespace ProjetoFinal
 {
@@ -32,6 +34,9 @@ namespace ProjetoFinal
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<ProjetoFinal0Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ProjetoFinal0Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
