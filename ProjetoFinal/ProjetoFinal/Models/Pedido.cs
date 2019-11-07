@@ -16,5 +16,6 @@ namespace ProjetoFinal.Models
         public int Id_Cliente { get; set; }
         public string Codigo_Rastreamento { get; set; }
         public PedidoStatus Status { get; set; }
+        public ICollection<Produto> Produtos { get; set; }
     }
 }

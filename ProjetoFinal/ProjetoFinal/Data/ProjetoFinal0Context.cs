@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using ProjetoFinal.Models;
 
 namespace ProjetoFinal.Models
 {
@@ -14,5 +15,9 @@ namespace ProjetoFinal.Models
         }
 
         public DbSet<ProjetoFinal.Models.Administrador> Administrador { get; set; }
+
+        public DbSet<ProjetoFinal.Models.Categoria> Categoria { get; set; }
+
+        public DbSet<ProjetoFinal.Models.Marca> Marca { get; set; }
     }
 }

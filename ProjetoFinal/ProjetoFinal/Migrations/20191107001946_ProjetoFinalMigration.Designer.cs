@@ -9,8 +9,8 @@ using ProjetoFinal.Models;
 namespace ProjetoFinal.Migrations
 {
     [DbContext(typeof(ProjetoFinal0Context))]
-    [Migration("20191031005415_Mig0")]
-    partial class Mig0
+    [Migration("20191107001946_ProjetoFinalMigration")]
+    partial class ProjetoFinalMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,6 +35,19 @@ namespace ProjetoFinal.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Administrador");
+                });
+
+            modelBuilder.Entity("ProjetoFinal.Models.Categoria", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categoria");
                 });
 #pragma warning restore 612, 618
         }

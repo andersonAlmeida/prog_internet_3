@@ -34,6 +34,19 @@ namespace ProjetoFinal.Migrations
 
                     b.ToTable("Administrador");
                 });
+
+            modelBuilder.Entity("ProjetoFinal.Models.Categoria", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categoria");
+                });
 #pragma warning restore 612, 618
         }
     }
