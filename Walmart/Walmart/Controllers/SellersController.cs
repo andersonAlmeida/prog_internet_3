@@ -48,9 +48,43 @@ namespace Walmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Seller seller)
+        public IActionResult Create(SellerFormViewModel obj)
         {
-            _sellerService.Insert(seller);
+            Seller slr = obj.Seller;
+            _sellerService.Insert(slr);
+            return RedirectToAction("Index");
+        }
+
+        /* Para tornar um parâmetro opcional basta 
+         * adicionar um simbolo ? após o tipo da variável */
+        public IActionResult Delete(int? id)
+        {
+            // verifica se o usuário acessou a url sem passar um id
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // Tenta buscar o registro desse vendedor
+            var obj = _sellerService.FindById(id.Value);
+
+            // Verifico se o id era válido, ou seja
+            // se havia um vendedor com esse id
+            if (obj == null)
+            {
+                // Vendedor não encontrado, retorna a página de não encontrado
+                return NotFound();
+            }
+
+            // Retorna o vendedor para o delete.cshtml
+            return View(obj);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            _sellerService.Remove(id);
+
             return RedirectToAction("Index");
         }
     }

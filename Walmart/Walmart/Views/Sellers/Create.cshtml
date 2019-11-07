@@ -12,29 +12,29 @@
         <form asp-action="Create">
             <div class="form-group">
                 <label asp-for="Seller.Name" class="control-label">Name</label>
-                <input asp-for="Seller.Name" class="form-control" name="Name" placeholder="Seller name" />
+                <input asp-for="Seller.Name" class="form-control" placeholder="Seller name" />
             </div>
 
             <div class="form-group">
                 <label asp-for="Seller.Email" class="control-label">E-mail</label>
-                <input asp-for="Seller.Email" class="form-control" name="Name" placeholder="Seller e-mail" />
+                <input asp-for="Seller.Email" class="form-control" placeholder="Seller e-mail" />
             </div>
 
             <div class="form-group">
-                <label asp-for="Seller.Department.Id" class="control-label">Departments</label>
-                <select asp-for="Seller.Department.Id" class="form-control" 
+                <label asp-for="Seller.DepartmentId" class="control-label">Departments</label>
+                <select asp-for="Seller.DepartmentId" class="form-control" 
                     asp-items="@(new SelectList(Model.Departments, "Id", "Name"))"></select>
                 @* Lista de Objetos, Propriedade chave, Valor que vai aparecer na lista *@
             </div>
 
             <div class="form-group">
                 <label asp-for="Seller.BirthDate" class="control-label">Birth Date</label>
-                <input asp-for="Seller.BirthDate" class="form-control" name="Name" placeholder="Seller birth date" />
+                <input asp-for="Seller.BirthDate" class="form-control" placeholder="Seller birth date" />
             </div>
 
             <div class="form-group">
                 <label asp-for="Seller.Salary" class="control-label">Salary</label>
-                <input asp-for="Seller.Salary" class="form-control" name="Name" placeholder="Seller salary" />
+                <input asp-for="Seller.Salary" class="form-control" placeholder="Seller salary" />
             </div>
 
             <div class="form-group">

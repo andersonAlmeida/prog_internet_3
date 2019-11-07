@@ -29,5 +29,25 @@ namespace Walmart.Services
             _context.Add(seller);
             _context.SaveChanges();
         }
+
+        public Seller FindById(int id)
+        {
+            // Retorna o vendedor com o ID passado por parâmetro
+            return _context.Seller.FirstOrDefault(s => s.Id == id);
+        }
+
+        public void Remove(int id)
+        {
+            // Cria uma instância de Seller para apontar para o registro
+            // que quero remover
+            var seller = _context.Seller.Find(id);
+
+            // Remove o objeto do banco de dados
+            _context.Remove(seller);
+
+            // Confirmar transação de exclusão do registro ao
+            // EntityFramework para persistir a alteração
+            _context.SaveChanges();
+        }
     }
 }

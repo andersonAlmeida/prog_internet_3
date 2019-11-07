@@ -12,7 +12,7 @@ namespace Walmart.Models
         //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [MaxLength(20, ErrorMessage = "O limite máximo é 20 caracteres")]
-        [MinLength(2, ErrorMessage = "O limite minímo é 2 caracteres")]
+        [MinLength(2, ErrorMessage = "O limite mínimo é 2 caracteres")]
         public string Name { get; set; }
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }

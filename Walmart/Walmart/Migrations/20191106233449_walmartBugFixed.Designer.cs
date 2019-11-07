@@ -10,8 +10,8 @@ using Walmart.Data;
 namespace Walmart.Migrations
 {
     [DbContext(typeof(WalmartContext))]
-    [Migration("20191016224548_AutoIncrementacao")]
-    partial class AutoIncrementacao
+    [Migration("20191106233449_walmartBugFixed")]
+    partial class walmartBugFixed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -69,7 +69,7 @@ namespace Walmart.Migrations
 
                     b.Property<DateTime>("BirthDate");
 
-                    b.Property<int?>("DepartmentId");
+                    b.Property<int>("DepartmentId");
 
                     b.Property<string>("Email");
 
@@ -96,7 +96,8 @@ namespace Walmart.Migrations
                 {
                     b.HasOne("Walmart.Models.Department", "Department")
                         .WithMany("Sellers")
-                        .HasForeignKey("DepartmentId");
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
