@@ -19,5 +19,11 @@ namespace ProjetoFinal.Models
         public DbSet<ProjetoFinal.Models.Categoria> Categoria { get; set; }
 
         public DbSet<ProjetoFinal.Models.Marca> Marca { get; set; }
+
+        public DbSet<ProjetoFinal.Models.Pedido> Pedido { get; set; }
+
+        public DbSet<ProjetoFinal.Models.Produto> Produto { get; set; }
+
+        public DbSet<ProjetoFinal.Models.ProdutoPedido> ProdutoPedido { get; set; }
     }
 }

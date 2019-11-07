@@ -1,0 +1,51 @@
+﻿@model ProjetoFinal.Models.Pedido
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prazo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prazo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Cliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_Cliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo_Rastreamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Codigo_Rastreamento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

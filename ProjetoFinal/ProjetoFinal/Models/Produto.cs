@@ -15,6 +15,6 @@ namespace ProjetoFinal.Models
         public int Estoque { get; set; }
         public int Id_Marca { get; set; }
         public int Id_Categoria { get; set; }
-        public ICollection<Pedido> Pedidos { get; set; }
+        public ICollection<ProdutoPedido> PP { get; set; }
     }
 }
